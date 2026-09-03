@@ -11,19 +11,21 @@
     <main class="Cancha">
 
     <div class="Arco">
-    <article class="jugador">
-        <p class="Numero">1</p>
+    <article class="Arquero">
+        <div class="circulo"><p class="Numero">1</p></div>
     <p class="nombre">Arquero</p>
 </article>
 </div>
 
      <div class="Defensa">
      <article class="jugador">
-        <p class="Numero">2</p>
+        <div class="circulo"><p class="Numero">2</p>
+        </div>
      <p class="nombre">Defensa</p>
      </article>
       <article class="jugador">
-        <p class="Numero">2</p>
+     <div class="circulo"><p class="Numero">2</p>
+        </div>
      <p class="nombre">Defensa</p>
      </article>
      
@@ -31,48 +33,44 @@
 
       <div class="Mediocampo">
       <article class="jugador">
-        <p class="Numero">3</p>
+        <div class="circulo"><p class="Numero">3</p></div>
       <p class="nombre">Mediocampista</p>
       </article>
 
-
-
-
-
       <article class="jugador">
-        <p class="Numero">3</p>
+        <div class="circulo"><p class="Numero">4</p></div>
       <p class="nombre">Mediocampista</p>
       </article>
 
 
       <article class="jugador">
-        <p class="Numero">3</p>
+        <div class="circulo"><p class="Numero">5</p></div>
       <p class="nombre">Mediocampista</p>
       </article>
 
 
 
       <article class="jugador">
-        <p class="Numero">3</p>
+        <div class="circulo"><p class="Numero">6</p></div>
       <p class="nombre">Mediocampista</p>
       </article>
       </div>
 
        <div class="Ataque">
        <article class="jugador">
-        <p class="Numero">4</p>
+        <div class="circulo"><p class="Numero">7</p></div>
        <p class="nombre">El Bicho</p>
     </article>
 
 
       <article class="jugador">
-        <p class="Numero">4</p>
+        <div class="circulo"><p class="Numero">8</p></div>
        <p class="nombre">El Bicho</p>
     </article>
 
 
       <article class="jugador">
-        <p class="Numero">4</p>
+        <div class="circulo"><p class="Numero">9</p></div>
        <p class="nombre">El Bicho</p>
     </article>
     </div>
@@ -81,82 +79,89 @@
 </body>
 
        <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-.Cancha{
-    background-color: rgb(43, 226, 104);
-  aspect-ratio: 6/3;
-flex-direction: column;
-justify-content: space-between;
-display: flex;
-border: 1rem ;
-border-color: whitesmoke;
 
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+        }
+.Cancha {
+             background-color: rgb(43, 226, 104);
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            display: flex;
+            border: 1rem solid rgb(218, 30, 30);
+            box-sizing: border-box;
+        }
 
 
 
 .Arco{
-    height: 20%;
+    height: 25%;
     width: 100%;
-    background-color: rgb(43, 226, 104);
-    padding: 1rem;
+    background-color: rgb(51, 197, 58);
+    padding: 0.5rem;
     display:flex;
     text-overflow: hidden;
     align-items: center;
-    margin: 0.5rem;
     justify-content: space-evenly;
-    border: 1rem ;
+    border: 0.5rem solid rgb(218, 30, 30);
    flex-direction: row;
 }
 .Defensa{
-height: 20%;
+height: 25%;
     width: 100%;; 
     background-color: rgb(43, 226, 104);
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     text-overflow: hidden;
     align-items: center;
-    margin: 0.5rem;
     justify-content: space-evenly;
- 
+ border: 0.5rem solid rgb(218, 30, 30);
     flex-direction: row;
 }
 .Mediocampo{
-height: 20%;
+height: 25%;
     width: 100%;;
-    background-color: rgb(43, 226, 104);
-    padding: 1rem;
+    background-color: rgb(51, 197, 58);
+    padding: 0.5rem;
     display:flex;
     text-overflow: hidden;
     align-items: center;
-    margin: 0.5rem;
     justify-content: space-evenly;
-   
+   border: 0.5rem solid rgb(218, 30, 30);
     flex-direction: row;
 }
 .Ataque{
-height: 20%;
+height: 25%;
     width: 100%;;
     background-color: rgb(43, 226, 104);
-    padding: 1rem;
+    padding: 0.5rem;
     display:flex;
     text-overflow: hidden;
     align-items: center;
-    margin: 0.5rem;
     justify-content: space-evenly;
-    
+    border: 0.5rem solid rgb(218, 30, 30);
     flex-direction: row;
 }
 .jugador{
     background-color: aqua;
-padding: 1rem;
+padding: 0.5rem;
 display: flex;
 flex-direction: column;
 align-items:center;
-justify-content: center;
+justify-content: space-around;
 height: 9rem;
 width: 9rem;
 text-overflow: hidden;
@@ -165,21 +170,38 @@ border-radius: 10%;
 }
 .nombre{
     font-size: large;
+    text-align: center;
 }
 .circulo{
    
-background-color: bisque;
+background-color: black ;
+display: flex;
     font-weight: bolder;
     aspect-ratio: 1/1;
     font-size: 4rem;
     border-radius: 50%;
+    justify-content: center;
+    align-items: center;
 }
 .Numero{
     font-weight: bolder;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/2;
     font-size: 4rem;
+    color: white;
 }
 
+.Arquero{
+    background-color: rgb(255, 17, 0);
+padding: 0.5rem;
+display: flex;
+flex-direction: column;
+align-items:center;
+justify-content: space-around;
+height: 9rem;
+width: 9rem;
+text-overflow: hidden;
+border: 2px solid whitesmoke;
+border-radius: 10%;
 }
 
 
